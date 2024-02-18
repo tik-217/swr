@@ -5,6 +5,8 @@ import { useEffect } from "react";
 function App() {
   useEffect(() => {
     (async () => {
+      console.log(22);
+
       const ax = await axios({
         url: "https://tigrangabulian.amocrm.ru/oauth2/access_token",
         method: "POST",
@@ -18,12 +20,12 @@ function App() {
         },
         responseType: "json",
         data: {
-          client_id: "b235a361-6a4e-42ed-b1d6-20b51ccf1568",
+          client_id: "bc24b181-3ebc-4f06-8918-ff64dc659c16",
           client_secret:
-            "HO7QF8IR7WmFldGf47RBBA07JGAVoDWcHuCRllFpbpUYwVcZQtJg65AMKgjCaGZC",
+            "YmmPG8gyO82P1daxuTBQ2uF8gUBURYc0A27lrnUv9L7xI2RShWszilFvmgPWWFT4",
           grant_type: "authorization_code",
-          code: "def5020030aea5a7879899d1c31e7db791622c2223497a63bb2f0566e90c5e26975006a6ac1298d0fe05c6e4564ad638086e64b17d93a1d9c9e37363c2ac6e559ef4cd8765e919dca4ebf6d5fca4039a6be82617b8c3683fbf6b3afb8720e1dc28cf04dbe297c0e496bed80943713ffcd25f34f1daf59e7cdfa17769e8a5138ff5bee91f086d4706b66d9428163073723208304cd6b07dd088fbb1123cf022f863445b7b43755c9b4aa4a61c8249bfbbe64ce7fea0b1775e707c9c13e0a9987f2f9dc730b9a46d41df8ee829d0f3b0c21c18b661c1a22fd5d8d3a42da15531cac262288663f59e01a7ba0d3d4cde4bd85d5849df0bc6af04187e70df151d4b56ef5d92bcb0a64d6286f56ce6ee4d8e52f70f5d4a9b01a7b22d32f6e95a86cd360a4d5b1c7f0ea90400aa80e1666ee48901904b5ef86c71430363140038873a39cf15a0f5e790a24d30b26c2d863ff0a08f3a56c6eeb55fb6769ddedf39abb06733324f690a5cc15b34fede7750fb4ed54017925937bb26c0b067c8a184a1a407bb59ac85e79ccea8a95702a4801b72c94a3718babf8ff48d7345d4d38759bdf842ae5dff19e3f4dacf9c1da8551d9cb41499a22a892f6199bfd63c637fd181754fb9c870d17f0ce45b5e399f304e1c304dbbfd3d5d46b9257a8ac8f522",
-          redirect_uri: "https://github.com/tik-217",
+          code: "def50200724595c0bf2cbcdce7e8ce6422db500dc6bbdfe1ad542a13f4b0b3822d9b0d58eee254413f3f2422b864919aaf06d758e9d34c737ce54775220164874f856bf1dd91d31c86bcf48fb8e6b87de2fb7b24f45c27364d5f27001592c7154560b5abc45ab62473ee9c6fa282ca75f35573aeb3eb84a5bac8d19b6605a647181b24cfa2556d0ad6648c3d43e2ea1b9227f648daad5e1b48678a6cbc8687c0101d90ebbca6c6e817f953576c30e353417ed8fb6e7c9083cae3ac533d9292124c0be3eeb6bcdf8a41a41ee565b07ceedaf35611d36352e3de80d2bd6f8b304b2c3b421b19b220e546d292a2bd182d7f03a3917ee98bf33043ba22c006232018bc7375b687008985513695a592673fa903d3fa581c64e2df03c8d8ea6cbd71c8262eb76ab5716746124d0ee07f5a26c835649f98df3b49d4dc34f0efc301539cb9ee86dcf16119ffc1c03f6a8a510b31986b2b903ebe78e0306b5f5f03267556d2a4e8cf93d48d1ee382f8ab5f33b2f0a4a847383dccff0600720b0ef46cbb6d4000e38a6f55f1ca79dc6196179ac564bb27d08620b97deb3957c0393792aff334de2a20a107e8e64546ab5ecd985a865adba2e02c2938b67d3639055011d3319897fb9fba930a7ae9b114cbd7c3d3cff313335000fccb2e181aac38c8d322",
+          redirect_uri: "https://swr-five.vercel.app/",
         },
       });
 
@@ -31,7 +33,22 @@ function App() {
     })();
   }, []);
 
-  return <></>;
+  return (
+    <>
+      <script
+        className="amocrm_oauth"
+        data-client-id="bc24b181-3ebc-4f06-8918-ff64dc659c16"
+        data-title="Button"
+        data-compact="false"
+        data-class-name="className"
+        data-color="default"
+        data-state="state"
+        data-error-callback="functionName"
+        data-mode="popup"
+        src="https://www.amocrm.ru/auth/button.min.js"
+      ></script>
+    </>
+  );
 }
 
 export default App;
