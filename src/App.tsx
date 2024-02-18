@@ -11,12 +11,7 @@ function App() {
         url: "https://tigrangabulian.amocrm.ru/oauth2/access_token",
         method: "POST",
         headers: {
-          "Access-Control-Allow-Origin": "https://109.195.23.223:34031",
-        },
-        proxy: {
-          protocol: "https",
-          host: "109.195.23.223",
-          port: 34031,
+          "Access-Control-Allow-Origin": "https://swr-five.vercel.app",
         },
         responseType: "json",
         data: {
